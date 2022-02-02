@@ -13,9 +13,9 @@ print("La contraseña de longitud", length, "es:", result_str)
 #input para el sitio en el que se usa la contraseña.
 passSite = str(input("Para donde es la contraseña: "))
 
-#Te crea un archivo donde te muestra las contraseñas generadas.
+#Te crea un archivo donde te muestra las contraseñas generadas. Al usar open() seguido de 'a' te permite crear o sobreescribir un archivo si ya existe.
 try:
-    with open('desktop/Password.txt', 'w') as f:
+    with open('desktop/Password.txt', 'a') as f:
         f.write('Estas es tu contraseña:\n')
         f.write('La contraseña ')
         f.write(passSite)
